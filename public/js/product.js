@@ -2,7 +2,9 @@ const parameters = new URLSearchParams(window.location.search);
 const id = parameters.get("id");
 
 async function laadProduct() {
-    const response = await fetch(`/api/producten/${id}`);
+    const response = await fetch(`/api/
+        
+        /${id}`);
 
     const product = await response.json();
 

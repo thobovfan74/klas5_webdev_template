@@ -18,10 +18,10 @@ app.get("/api/producten", (req, res) => {
             ? `SELECT id, naam, prijs, beschrijving, beschikbaar, categorie_id
                FROM producten
                WHERE naam LIKE ?
-               ORDER BY naam;`
+               ORDER BY prijs;`
             : `SELECT id, naam, prijs, beschrijving, beschikbaar, categorie_id
                FROM producten
-               ORDER BY naam;`;
+               ORDER BY prijs;`;
 
         const statement = db.prepare(sql);
 
